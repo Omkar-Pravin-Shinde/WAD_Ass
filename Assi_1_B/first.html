@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun()
+    {
+        const myObj={name:document.getElementById("exampleInputName").value,
+        email:document.getElementById("exampleInputEmail").value,
+        contact:document.getElementById("exampleInputContact").value}
+        const myJSON = JSON.stringify(myObj);
+        localStorage.setItem("formJSON",myJSON);
+    }   
+    </script>
+    <style>
+
+        form{
+            margin-top: 5rem;
+        }
+        input{
+            width: 100%;
+            /* margin-top: 15rem; */
+        }
+        
+        </style>
+     <form action="second.html">
+            
+                Entername:
+                <input type="name"  id="exampleInputName">
+                Email: 
+                <input type="email" id="exampleInputEmail" >
+                Contact:
+                <input type="contact" id="exampleInputContact">
+              
+              <button type="submit" class="btn btn-primary" onclick="fun()">Submit</button>
+        </form>
+</form>
+</body>
+</html>
